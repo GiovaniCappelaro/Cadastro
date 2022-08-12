@@ -3,4 +3,10 @@
     <string name="name_person_form"><b>Nome completo</b></string>
     <string name="telefone_person_form"><b>Telefone</b></string>
     <string name="email_person_form"><b>E-mail</b></string>
+    <string name="checkbox_aceito_lista"><b>Ingressar na lista de e-mails?</b></string>
+    <string name="radio_group_sexo"><b>Sexo</b></string>
+    <string name="radio_group_sexo_masculino"><b>Masculino</b></string>
+    <string name="radio_group_sexo_feminino"><b>Feminino</b></string>
+    <string name="cidade_person_form"><b>Cidade</b></string>
+    <string name="UF_person_form"><b>UF</b></string>
 </resources>

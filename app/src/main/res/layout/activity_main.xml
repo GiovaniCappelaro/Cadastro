@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="5px"
+    android:layout_margin="20px">
+
+    <!--Nome Completo-->
 
     <TextView
         android:id="@+id/nomeCompleto"
@@ -15,15 +19,123 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/nomeCompletoText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/nomeCompleto"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <!--Telefone-->
+
     <TextView
+        android:id="@+id/telefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/telefone_person_form"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nomeCompletoText"
         />
+
+    <EditText
+        android:id="@+id/telefoneText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/telefone"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--E-mail-->
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email_person_form"
+        app:layout_constraintTop_toBottomOf="@+id/telefoneText"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Aceitar Lista E-mail (checkbox)-->
+
+    <CheckBox
+        android:id="@+id/checkboxAceitoLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox_aceito_lista"
+        app:layout_constraintTop_toBottomOf="@+id/emailText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Sexo (Radio Group)-->
+
+    <TextView
+        android:id="@+id/sexoRadioGroupText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/radio_group_sexo"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxAceitoLista"/>
+
+
+    <RadioGroup
+        android:id="@+id/sexoRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/sexoRadioGroupText">
+
+
+        <RadioButton
+            android:id="@+id/sexoRadioButtonMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_group_sexo_masculino"
+            app:layout_constraintTop_toBottomOf="@+id/sexoRadioGroup"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/sexoRadioButtonFeminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_group_sexo_feminino"
+            android:layout_weight="1"/>
+
+    </RadioGroup>
+
+    <!--Cidade-->
+
+    <TextView
+        android:id="@+id/cidadeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cidade_person_form"
+        app:layout_constraintTop_toBottomOf="@+id/sexoRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <EditText
+        android:id="@+id/cidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cidadeText"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--Spinner - UF -->
+
+    <TextView
+        android:id="@+id/UFSpinnerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/UF_person_form"
+        app:layout_constraintTop_toBottomOf="@+id/cidade"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

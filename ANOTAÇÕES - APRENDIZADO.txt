@@ -1,0 +1,3 @@
+propriedade "android:id" define um id unico;
+-> COm base nela, posso mandar o topo do item de baixo alinhar com a base do de cima 
+   (EX: app:layout_constraintTop_toBottomOf="@id/nomeCompleto")
