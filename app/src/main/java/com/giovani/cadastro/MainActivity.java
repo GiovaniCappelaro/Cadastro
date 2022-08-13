@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinner = findViewById(activityMainBinding.spinnerUF.getId());
 
         spinner.setAdapter(new ArrayAdapter<UFs>(
-                this, android.R.layout.simple_spinner_item, UFs.values()));
+                this, android.R.layout.simple_spinner_dropdown_item, UFs.values()));
+        //android.R.layout.simple_spinner_dropdown_item, UFs.values()));
 
         activityMainBinding.buttonSalvar.setOnClickListener( view -> {
             String nome = activityMainBinding.nomeCompletoText.getText().toString();
@@ -50,7 +51,17 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, formulario.toString(), Toast.LENGTH_LONG).show(); //equivale ao "console.log()"
         } );
 
+        activityMainBinding.buttonLimpar.setOnClickListener( view -> {
+            activityMainBinding.nomeCompletoText.getText().clear();
+            activityMainBinding.telefoneText.getText().clear();
+            activityMainBinding.emailText.getText().clear();
+            activityMainBinding.checkboxAceitoLista.setChecked(false);
+            //activityMainBinding.sexoRadioButtonMasculino.clearCheck();
+            activityMainBinding.cidade.getText().clear();
 
+            activityMainBinding.spinnerUF.setAdapter(new ArrayAdapter<UFs>(
+                    this, android.R.layout.simple_spinner_dropdown_item, UFs.values()));
+        });
 
         //setContentView(R.layout.activity_main);
     }
